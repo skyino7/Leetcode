@@ -12,10 +12,10 @@ class Solution(object):
         """Checking the first element in the string"""
         prefix = strs[0]
 
-        """Iterating through the list and checking the common prefix"""
+        """Looping through the list and checking the common prefix"""
         for text in strs[1:]:
             while not text.startswith(prefix):
                 prefix = prefix[:-1]
-                if not strs:
+                if not prefix:
                     return ""
         return prefix
